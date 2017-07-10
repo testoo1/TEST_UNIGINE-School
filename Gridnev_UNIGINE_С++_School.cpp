@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
 
 // [6] Create output file
     std::ofstream ofs;
-    ofs.open ("out.txt");
+    ofs.open (out);
 
     if(!ofs)
     {
