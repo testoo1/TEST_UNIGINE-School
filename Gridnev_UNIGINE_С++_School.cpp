@@ -122,7 +122,7 @@ int main(int argc, char *argv[])
 // [7] Write data to output file
     ofs << "total urls " << urls
         << ", domains "  << sort_domain.size()
-        << " paths "     << sort_path.size() << std::endl;
+        << ", paths "     << sort_path.size() << std::endl;
 
     ofs << std::endl;
 
@@ -131,7 +131,7 @@ int main(int argc, char *argv[])
 
     ofs << std::endl;
 
-    ofs << "top path" << std::endl;
+    ofs << "top paths" << std::endl;
     print_top(sort_path, n, ofs);
 
 
@@ -149,7 +149,7 @@ void print_top(const std::vector<std::pair<int, std::string>>& data,
 
     for (auto x: data)
     {
-        ofs << x.first << '\t' << x.second << std::endl;
+        ofs << x.first << ' ' << x.second << std::endl;
 
         if (++i == n) return;
     }
