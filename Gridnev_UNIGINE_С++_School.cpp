@@ -61,11 +61,11 @@ int main(int argc, char *argv[])
 
 // [2] Open input file
     std::ifstream ifs;
-    ifs.open ("in.txt");
+    ifs.open (in);
 
     if(!ifs)
     {
-        std::cerr << "Can't open file with input data (in.txt)" << std::endl;
+        std::cerr << "Can't open file with input data (" <<  in << ")" << std::endl;
         std::exit(1);
     }
 
